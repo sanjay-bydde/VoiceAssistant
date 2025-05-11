@@ -1,0 +1,15 @@
+<div style="text-align: center; padding: 1rem">
+  <h2>🎤 Voice Assistant</h2>
+
+  <button (click)="toggleListening()">
+    {{ isListening ? "Stop Listening" : "Start Listening" }}
+  </button>
+
+  <div *ngIf="transcript">
+    <p><strong>Transcript:</strong> {{ transcript }}</p>
+  </div>
+
+  <div *ngIf="backendResponse">
+    <p><strong>Backend Response:</strong> {{ backendResponse }}</p>
+  </div>
+</div>
